@@ -1,0 +1,86 @@
+<form [formGroup]="registerForm">
+  <div class="form-controller">
+    <label>Nombre</label>
+    <div class="form-container">
+      <input
+        id="email"
+        placeholder="Nombre"
+        formControlName="name"
+        type="text"
+      />
+      <mat-icon>face</mat-icon>
+    </div>
+    <p
+      class="error"
+      *ngIf="
+        registerForm.get('name').errors && registerForm.get('name').touched
+      "
+    >
+      Por favor ingrese su nombre
+    </p>
+  </div>
+  <div class="form-controller">
+    <label>Apellido</label>
+    <div class="form-container">
+      <input
+        id="email"
+        placeholder="Apellido"
+        formControlName="lastname"
+        type="text"
+      />
+      <mat-icon>account_box</mat-icon>
+    </div>
+    <p
+      class="error"
+      *ngIf="
+        registerForm.get('lastname').errors &&
+        registerForm.get('lastname').touched
+      "
+    >
+      Por favor ingrese su apellido
+    </p>
+  </div>
+  <div class="form-controller">
+    <label>Email</label>
+    <div class="form-container">
+      <input
+        id="email"
+        placeholder="Email"
+        formControlName="email"
+        type="email"
+      />
+      <mat-icon>email</mat-icon>
+    </div>
+    <p
+      class="error"
+      *ngIf="
+        registerForm.get('email').errors && registerForm.get('email').touched
+      "
+    >
+      Por favor ingrese el correo correctamente
+    </p>
+  </div>
+  <div class="form-controller">
+    <label>Contraseña</label>
+    <div class="form-container">
+      <input
+        id="email"
+        placeholder="Contraseña"
+        formControlName="password"
+        type="password"
+      />
+      <mat-icon>lock</mat-icon>
+    </div>
+    <p
+      class="error"
+      *ngIf="
+        registerForm.get('password').errors &&
+        registerForm.get('password').touched
+      "
+    >
+      Por favor ingrese la contraseña
+    </p>
+  </div>
+  <button (click)="registerAccount()">Registrarse</button>
+  <button (click)="cancelRegister()">Cancelar Registro</button>
+</form>

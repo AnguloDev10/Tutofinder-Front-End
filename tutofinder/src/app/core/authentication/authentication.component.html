@@ -1,0 +1,13 @@
+<div class="authentication-container">
+  <div class="authentication-card mat-elevation-z8">
+    <h1>TutoFinder</h1>
+    <app-login
+      (registrarse)="activeRegisterComponent()"
+      *ngIf="activeOption[0]"
+    ></app-login>
+    <app-register
+      (cancelarRegistro)="activeLoginComponent()"
+      *ngIf="activeOption[1]"
+    ></app-register>
+  </div>
+</div>
