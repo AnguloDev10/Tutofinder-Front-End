@@ -3,7 +3,17 @@
   width: 100%;
   height: 100vh;
   @include center();
-  background-color: rgb(116, 193, 238);
+  background-image: url("https://idc.brightspotcdn.com/dims4/default/387d311/2147483647/resize/800x%3E/quality/90/?url=https%3A%2F%2Fidc.brightspotcdn.com%2Fc2%2Fdf%2F657f01ef4114b74d063b2618b68b%2Fadobestock-336831758.jpeg");
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
   .authentication-card {
     @include center();
     @include title();

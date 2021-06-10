@@ -10,6 +10,7 @@ import { LoginComponent } from './core/authentication/login/login.component';
 import { RegisterComponent } from './core/authentication/register/register.component';
 import { AngularMaterialModule } from './core/material/material.module';
 import { NotificationComponent } from './shared/notification/notification.component';
+import { DashboardStudentComponent } from './core/dashboard-student/dashboard-student.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { NotificationComponent } from './shared/notification/notification.compon
     LoginComponent,
     RegisterComponent,
     NotificationComponent,
+    DashboardStudentComponent,
   ],
   imports: [
     BrowserModule,
