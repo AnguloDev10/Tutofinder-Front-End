@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthenticationComponent } from './core/authentication/authentication.component';
+import { DashboardStudentComponent } from './core/dashboard-student/dashboard-student.component';
 import { HomeComponent } from './core/home/home.component';
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
     component: AuthenticationComponent,
     data: { appbar: false },
   },
+  { path: 'dashboardStudent', component: DashboardStudentComponent },
 ];
 
 @NgModule({

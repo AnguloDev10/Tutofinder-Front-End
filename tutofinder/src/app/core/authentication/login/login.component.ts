@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { NotificationService } from 'src/app/services/notification.service';
 
 @Component({
@@ -8,31 +9,21 @@ import { NotificationService } from 'src/app/services/notification.service';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  constructor(private notificationService: NotificationService) {}
+  constructor(private notificationService: NotificationService, private router: Router) {}
 
   @Output() registrarse: EventEmitter<boolean> = new EventEmitter();
   loginForm: FormGroup;
 
   ngOnInit(): void {
     this.loginForm = new FormGroup({
-      email: new FormControl('', [Validators.required, Validators.email]),
-      password: new FormControl('', [Validators.required]),
+      email: new FormControl('student@gmail.com', [Validators.required, Validators.email]),
+      password: new FormControl('demopassword', [Validators.required]),
     });
   }
   openRegister() {
     this.registrarse.emit();
   }
   logIn() {
-    if (this.loginForm.valid) {
-      this.notificationService.openNotification(
-        'Se ha logeado correctamente',
-        'success'
-      );
-    } else {
-      this.notificationService.openNotification(
-        'Por ingrese sus datos de manera correcta',
-        'error'
-      );
-    }
+    this.router.navigateByUrl('/dashboardStudent');
   }
 }

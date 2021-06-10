@@ -13,6 +13,7 @@ import { NotificationComponent } from './shared/notification/notification.compon
 import { AppbarComponent } from './shared/appbar/appbar.component';
 import { MenuItemComponent } from './core/home/menu-item/menu-item.component';
 import { LeftSideNavComponent } from './shared/left-side-nav/left-side-nav.component';
+import { DashboardStudentComponent } from './core/dashboard-student/dashboard-student.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { LeftSideNavComponent } from './shared/left-side-nav/left-side-nav.compo
     AppbarComponent,
     MenuItemComponent,
     LeftSideNavComponent,
+    DashboardStudentComponent,
   ],
   imports: [
     BrowserModule,
