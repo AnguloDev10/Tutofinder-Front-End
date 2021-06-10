@@ -1,0 +1,33 @@
+@import "src/assets/styles/sharedstyles.scss";
+
+.menu-item-container {
+  width: 200px;
+  height: 240px;
+  background-color: white;
+  border-radius: 30px;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  @include subtitle();
+  @include button();
+  transition: all 250ms ease;
+
+  img {
+    border-radius: 25px;
+    height: 60%;
+    object-fit: cover;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 1020px) {
+  .menu-item-container {
+    width: 130px;
+    height: 170px;
+  }
+}

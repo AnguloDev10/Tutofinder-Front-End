@@ -10,6 +10,9 @@ import { LoginComponent } from './core/authentication/login/login.component';
 import { RegisterComponent } from './core/authentication/register/register.component';
 import { AngularMaterialModule } from './core/material/material.module';
 import { NotificationComponent } from './shared/notification/notification.component';
+import { AppbarComponent } from './shared/appbar/appbar.component';
+import { MenuItemComponent } from './core/home/menu-item/menu-item.component';
+import { LeftSideNavComponent } from './shared/left-side-nav/left-side-nav.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { NotificationComponent } from './shared/notification/notification.compon
     LoginComponent,
     RegisterComponent,
     NotificationComponent,
+    AppbarComponent,
+    MenuItemComponent,
+    LeftSideNavComponent,
   ],
   imports: [
     BrowserModule,

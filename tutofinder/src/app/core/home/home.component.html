@@ -1,1 +1,37 @@
-<p>home works!</p>
+<div class="home-container">
+  <img id="cuaderno" src="assets/imgs/cuaderno.png" />
+  <div class="title">
+    <h1>Bienvenido a TutoFinder</h1>
+    <h2>Menu</h2>
+  </div>
+  <div class="menu">
+    <app-menu-item
+      [menuItem]="'Tutoria'"
+      [imageUrl]="
+        'https://www.definicionabc.com/wp-content/uploads/general/Tutoria-maestra-alumna.jpg'
+      "
+    >
+    </app-menu-item>
+    <app-menu-item
+      [menuItem]="'Membresía'"
+      [imageUrl]="
+        'https://media.pasionmovil.com/2019/10/apple-card-clonada.jpg'
+      "
+    >
+    </app-menu-item>
+    <app-menu-item
+      [menuItem]="'Perfil'"
+      [imageUrl]="
+        'https://image.freepik.com/vector-gratis/perfil-empresario-dibujos-animados_18591-58479.jpg'
+      "
+    >
+    </app-menu-item>
+    <app-menu-item
+      [menuItem]="'Favoritos'"
+      [imageUrl]="
+        'https://sanroque.com.pe/wp-content/uploads/2017/03/O6VORA0.jpg'
+      "
+    >
+    </app-menu-item>
+  </div>
+</div>

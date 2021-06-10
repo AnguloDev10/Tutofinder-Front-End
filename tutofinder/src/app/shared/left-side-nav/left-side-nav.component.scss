@@ -1,0 +1,11 @@
+.left-side-nav-container {
+  background-color: white;
+  width: 300px;
+}
+
+@media screen and(max-width:900) {
+  .left-side-nav-container {
+    background-color: white;
+    width: 180px;
+  }
+}

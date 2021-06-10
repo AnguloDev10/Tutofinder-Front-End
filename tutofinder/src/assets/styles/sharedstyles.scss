@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&display=swap");
-$buttonColor: #f88585;
-$buttonOnHoverColor: #201aa3;
+$buttonColor: #233e62;
+$buttonOnHoverColor: #8884d4;
 $formdarkColorBackground: rgb(32 38 43);
 $backgroundDarkColor: rgb(66, 78, 89);
 @mixin center() {
@@ -11,7 +12,7 @@ $backgroundDarkColor: rgb(66, 78, 89);
 }
 @mixin title {
   h1 {
-    font-family: "Nunito", sans-serif;
+    font-family: "Nunito Sans", sans-serif;
     font-size: 3rem;
     font-weight: bold;
   }
