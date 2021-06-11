@@ -8,7 +8,7 @@
     <li><h2>Favoritos</h2></li>
   </ul>
 </div>
-<div class="second-appbar">
+<div class="second-appbar" *ngIf="visibility">
   <button mat-button (click)="activeLeftSideNav()">
     <mat-icon>menu</mat-icon>
   </button>
