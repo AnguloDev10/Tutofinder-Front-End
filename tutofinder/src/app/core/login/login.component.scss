@@ -32,110 +32,109 @@
     align-items: center;
     padding: 30px;
     justify-content: center;
+    .logo-row {
+      height: 20%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .logo {
+        height: 50%;
+      }
+    }
+    .form-row {
+      height: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      form {
+        width: 100%;
+        .mail-row {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          .mail-field {
+            box-sizing: border-box;
+            width: 100%;
+            margin: 0 5em;
+          }
+        }
+        .password-row {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          margin-top: 2em;
+          .password-field {
+            box-sizing: border-box;
+            width: 100%;
+            margin: 0 5em;
+            button {
+              background-color: transparent;
+              mat-icon {
+                color: black;
+              }
+            }
+          }
+        }
+      }
+      .links-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 2rem 5rem;
+        .left-link-col {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          width: 50%;
+          flex-direction: column;
+        }
+        .right-link-col {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          width: 50%;
+          flex-direction: column;
+        }
+      }
+    }
+    .message-row {
+      height: 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      .message-title {
+        color: #282a3f;
+        font-weight: 600;
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 0 6rem;
+      }
+    }
+    .button-row {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      .login-btn {
+        background-color: #6675df !important;
+        color: #fff;
+        border-radius: 20px;
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0 8em;
+      }
+      .login-btn:hover {
+        filter: brightness(0.8);
+      }
+    }
   }
-  .logo-row {
-    height: 20%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  form{
-    width: 100%;
-  }
-
-  .form-row {
-    height: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .message-row {
-    height: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  .message-title {
-    color:#282a3f;
-    font-weight: 600;
-    font-size: 1.2rem;
-    text-align: center;
-    margin: 0 6rem;
-  }
-  .mail-row {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .links-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 2rem 5rem;
-  }
-  .left-link-col {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 50%;
-    flex-direction: column;
-  }
-
-  .right-link-col {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 50%;
-    flex-direction: column;
-  }
-  .mail-field {
-    box-sizing: border-box;
-    width: 100%;
-    margin: 0 5em;
-  }
-
-  .password-row {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 2em;
-  }
-
-  .password-field {
-    box-sizing: border-box;
-    width: 100%;
-    margin: 0 5em;
-  }
-  .button-row {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-  .login-btn {
-    background-color: #6675df !important;
-    color: #fff;
-    border-radius: 20px;
-    box-sizing: border-box;
-    width: 100%;
-    margin: 0 8em;
-  }
-  .login-btn:hover {
-    filter: brightness(0.8);
-  }
-
-  .logo {
-    height: 50%;
-  }
-
 }
 
 @media screen and (max-width: 900px) {

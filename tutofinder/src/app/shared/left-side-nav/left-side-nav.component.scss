@@ -1,6 +1,36 @@
+@import "src/assets/styles/sharedstyles.scss";
 .left-side-nav-container {
   background-color: white;
   width: 300px;
+
+  .item {
+    height: 80px;
+    @include subtitle();
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    justify-content: space-between;
+    border-bottom: 2px solid;
+    cursor: pointer;
+    h2 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    transition: all 250ms ease;
+  }
+  .item.logo {
+    align-items: center;
+    justify-content: center;
+    .logo {
+      width: 50%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  .item:hover {
+    background-color: rgb(214, 214, 214);
+  }
 }
 
 @media screen and(max-width:900) {

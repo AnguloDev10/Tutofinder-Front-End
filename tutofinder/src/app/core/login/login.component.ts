@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -15,8 +15,8 @@ export class LoginComponent implements OnInit {
   companyId = null;
   userId = null;
   public loginForm: FormGroup = new FormGroup({
-    username: new FormControl('student@gmail.com'),
-    password: new FormControl('demopassword'),
+    username: new FormControl('', [Validators.required]),
+    password: new FormControl('', [Validators.required]),
   });
   background = 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))';
   image =
@@ -31,10 +31,15 @@ export class LoginComponent implements OnInit {
     // localStorage.setItem('firstName', this.name);
     this.router.navigateByUrl('/dashboardStudent');
   }
-  getUsername(event: any) { // without type info
+  getUsername(event: any) {
+    // without type info
     this.username = event.target.value;
   }
-  getPassword(event: any) { // without type info
+  getPassword(event: any) {
+    // without type info
     this.password = event.target.value;
+  }
+  redirectTo(url) {
+    window.open(url);
   }
 }

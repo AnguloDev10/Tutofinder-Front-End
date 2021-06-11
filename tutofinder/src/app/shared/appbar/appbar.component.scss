@@ -11,8 +11,19 @@
     font-size: 2rem;
     color: white;
   }
+  .img {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .logo {
+      width: 120px;
+      height: auto;
+      background-color: white;
+    }
+  }
   ul {
-    width: 70%;
+    width: 90%;
     display: flex;
     align-items: center;
     margin: 0;
@@ -51,9 +62,8 @@
 }
 @media screen and (max-width: 700px) {
   .appbar-container {
-    h1 {
+    .img {
       width: 100%;
-      text-align: center;
     }
     ul {
       li {

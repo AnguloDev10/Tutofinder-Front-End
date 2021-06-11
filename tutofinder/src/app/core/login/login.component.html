@@ -2,36 +2,56 @@
   <div class="left-container" [ngStyle]="myStyle()">
     <h1>Welcome to Tutofinder!</h1>
     <h2>Click here for more information to join us</h2>
-    <a href="https://w7moises.github.io/AplicacionesLandingPage/" target="_blank">
-    <button>About Us</button>
-    </a>
+    <button
+      (click)="
+        redirectTo('https://w7moises.github.io/AplicacionesLandingPage/')
+      "
+    >
+      About Us
+    </button>
   </div>
   <div class="right-container">
     <div class="logo-row">
       <img class="logo" src="../assets/imgs/tutofinder.png" alt="Tutofinder" />
     </div>
-
     <div class="message-row">
       <h1 class="message-title">Find out the best tutorship for you!</h1>
     </div>
     <div class="form-row">
       <form [formGroup]="loginForm">
         <div class="mail-row">
-          <mat-form-field class="mail-field" floatLabel="always">
+          <mat-form-field class="mail-field">
             <mat-label>E-mail</mat-label>
             <label>
-              <input formControlName="username" (keyup)="getUsername($event)" matInput placeholder="student@gmail.com">
+              <input
+                formControlName="username"
+                (keyup)="getUsername($event)"
+                matInput
+                placeholder="email"
+              />
             </label>
           </mat-form-field>
         </div>
         <div class="password-row">
-          <mat-form-field class="password-field" floatLabel="always">
+          <mat-form-field class="password-field">
             <mat-label>Password</mat-label>
             <label>
-              <input formControlName="password" (keyup)="getPassword($event)" matInput [type]="hide1 ? 'password' : 'text'">
+              <input
+                formControlName="password"
+                (keyup)="getPassword($event)"
+                matInput
+                placeholder="password"
+                [type]="hide1 ? 'password' : 'text'"
+              />
             </label>
-            <button mat-icon-button matSuffix (click)="hide1 = !hide1" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide1">
-              <mat-icon>{{hide1 ? 'visibility_off' : 'visibility'}}</mat-icon>
+            <button
+              mat-icon-button
+              matSuffix
+              (click)="hide1 = !hide1"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide1"
+            >
+              <mat-icon>{{ hide1 ? "visibility_off" : "visibility" }}</mat-icon>
             </button>
           </mat-form-field>
         </div>
@@ -45,7 +65,10 @@
         </div>
       </div>
       <div class="button-row">
-        <button (click)="login()" class="login-btn" mat-raised-button>Log In</button>
+        <button (click)="login()" class="login-btn" mat-raised-button>
+          Log In
+        </button>
       </div>
     </div>
+  </div>
 </div>
