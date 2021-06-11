@@ -1,0 +1,92 @@
+* {
+    margin: 0px; 
+	padding: 0px; 
+    box-sizing: border-box;
+  }
+
+  body, html {
+	height: 100%;
+	font-family: Poppins-Regular, sans-serif;
+}
+
+.left-panel{
+  width: 60%;
+  background-image: url("https://idc.brightspotcdn.com/dims4/default/387d311/2147483647/resize/800x%3E/quality/90/?url=https%3A%2F%2Fidc.brightspotcdn.com%2Fc2%2Fdf%2F657f01ef4114b74d063b2618b68b%2Fadobestock-336831758.jpeg");
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+
+}
+.left-panel::before{
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,0.1);
+    
+}
+form {
+    width: 100%;
+  }
+.right-panel {
+    width: 40%;
+}
+.aboutus-row{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-left: 3rem;
+  flex-direction: column;
+  color: #fff;
+
+}
+.logo {
+    height: 50%;
+  }
+button{
+    border-radius: 20px;
+    border:1px solid #0f0f11 ;
+    color: #1513ac;
+    background-color: transparent;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+}
+
+.aboutus-col {
+  min-height: auto;
+  text-align: justify;
+  padding: 0 auto;
+}
+.logo-row{
+    padding-left: 30px;
+     padding-right: 30px;
+}
+
+@media only screen and (max-width: 950px){
+    .left-panel {
+      width: 50%;
+    }
+    .right-panel {
+     width: 50%;
+     
+    }
+
+  }
+  @media only screen and (max-width: 690px){
+    .login-container {
+      flex-direction: column;
+      flex-direction: column-reverse;
+    }
+}

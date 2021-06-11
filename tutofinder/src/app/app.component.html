@@ -1,12 +1,1 @@
-<div class="container-fluid">
-  <mat-drawer-container>
-    <app-appbar (onLeftSideBarActivator)="leftdrawer.toggle()"></app-appbar>
-
-    <router-outlet></router-outlet>
-
-    <mat-drawer #leftdrawer class="sidenav" mode="over" position="start">
-      <app-left-side-nav (closeSideNav)="leftdrawer.close()">
-      </app-left-side-nav>
-    </mat-drawer>
-  </mat-drawer-container>
-</div>
+<router-outlet></router-outlet>
