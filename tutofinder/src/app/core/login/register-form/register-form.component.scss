@@ -1,0 +1,23 @@
+@import "src/assets/styles/sharedstyles.scss";
+form {
+  @include form-controller(
+    (
+      Properties: (
+        height: 20px,
+      ),
+    )
+  );
+  @include button();
+  @include paragraph();
+  .form-controller {
+    .form-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

@@ -57,7 +57,7 @@ $backgroundDarkColor: rgb(66, 78, 89);
           border-radius: map-get($props, "radius");
         }
 
-        padding: 5px 0 5px 15px;
+        padding: 10px;
       }
       textarea:focus,
       input:focus {

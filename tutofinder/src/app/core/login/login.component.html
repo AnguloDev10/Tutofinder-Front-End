@@ -17,58 +17,15 @@
     <div class="message-row">
       <h1 class="message-title">Find out the best tutorship for you!</h1>
     </div>
-    <div class="form-row">
-      <form [formGroup]="loginForm">
-        <div class="mail-row">
-          <mat-form-field class="mail-field">
-            <mat-label>E-mail</mat-label>
-            <label>
-              <input
-                formControlName="username"
-                (keyup)="getUsername($event)"
-                matInput
-                placeholder="email"
-              />
-            </label>
-          </mat-form-field>
-        </div>
-        <div class="password-row">
-          <mat-form-field class="password-field">
-            <mat-label>Password</mat-label>
-            <label>
-              <input
-                formControlName="password"
-                (keyup)="getPassword($event)"
-                matInput
-                placeholder="password"
-                [type]="hide1 ? 'password' : 'text'"
-              />
-            </label>
-            <button
-              mat-icon-button
-              matSuffix
-              (click)="hide1 = !hide1"
-              [attr.aria-label]="'Hide password'"
-              [attr.aria-pressed]="hide1"
-            >
-              <mat-icon>{{ hide1 ? "visibility_off" : "visibility" }}</mat-icon>
-            </button>
-          </mat-form-field>
-        </div>
-      </form>
-      <div class="links-row">
-        <div class="left-link-col">
-          <a routerLink="/dashboardStudent">Register as a Student</a>
-        </div>
-        <div class="right-link-col">
-          <a routerLink="/dashboardStudent">Register as a Tutor</a>
-        </div>
-      </div>
-      <div class="button-row">
-        <button (click)="login()" class="login-btn" mat-raised-button>
-          Log In
-        </button>
-      </div>
+    <div class="form-card mat-elevation-z8">
+      <app-login-form
+        (registrarse)="activateRegister()"
+        *ngIf="activeComponent[0]"
+      ></app-login-form>
+      <app-register-form
+        (cancelarRegistro)="activateLogin()"
+        *ngIf="activeComponent[1]"
+      ></app-register-form>
     </div>
   </div>
 </div>

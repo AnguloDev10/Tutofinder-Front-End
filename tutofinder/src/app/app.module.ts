@@ -12,6 +12,8 @@ import { AppbarComponent } from './shared/appbar/appbar.component';
 import { MenuItemComponent } from './core/home/menu-item/menu-item.component';
 import { LeftSideNavComponent } from './shared/left-side-nav/left-side-nav.component';
 import { DashboardStudentComponent } from './core/dashboard-student/dashboard-student.component';
+import { LoginFormComponent } from './core/login/login-form/login-form.component';
+import { RegisterFormComponent } from './core/login/register-form/register-form.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { DashboardStudentComponent } from './core/dashboard-student/dashboard-st
     MenuItemComponent,
     LeftSideNavComponent,
     DashboardStudentComponent,
+    LoginFormComponent,
+    RegisterFormComponent,
   ],
   imports: [
     BrowserModule,

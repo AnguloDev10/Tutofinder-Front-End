@@ -1,0 +1,31 @@
+@import "src/assets/styles/sharedstyles.scss";
+form {
+  @include form-controller(
+    (
+      Properties: (
+        height: 20px,
+      ),
+    )
+  );
+  @include button();
+  @include paragraph();
+  .form-controller {
+    .form-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  p.register {
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 250ms ease;
+  }
+  p.register:hover {
+    transform: translateY(-5px);
+  }
+}
