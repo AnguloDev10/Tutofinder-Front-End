@@ -1,1 +1,26 @@
-<p>report works!</p>
+<div class="report-container">
+  <h1>Reportes</h1>
+  <div class="menu-items">
+    <app-menu-item
+      [menuItem]="'Crear Reporte'"
+      [imageUrl]="
+        'https://1.bp.blogspot.com/-nzm908Pfunw/VqXgeRNp4LI/AAAAAAAACJI/wgeVntLSIT8/w1200-h630-p-k-no-nu/status-report.png'
+      "
+      (click)="createReport()"
+    ></app-menu-item>
+  </div>
+  <h1>Reportes Disponibles</h1>
+
+  <div class="reports">
+    <div class="single-report mat-elevation-z4">
+      <p>Descripcion del reporte</p>
+      <p>StudentId</p>
+      <p>TutorshipId</p>
+    </div>
+    <div class="single-report mat-elevation-z4">
+      <p>Descripcion del reporte</p>
+      <p>StudentId</p>
+      <p>TutorshipId</p>
+    </div>
+  </div>
+</div>

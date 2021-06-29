@@ -1,0 +1,48 @@
+<div class="booking">
+  <h1>Crear Reserva</h1>
+  <form [formGroup]="bookingForm">
+    <div class="form-controller">
+      <label>Id del estudiante</label>
+      <div class="form-container">
+        <input
+          placeholder="Id del estudiante"
+          formControlName="studentId"
+          type="text"
+        />
+        <mat-icon>book</mat-icon>
+      </div>
+      <p
+        class="error"
+        *ngIf="
+          bookingForm.get('studentId').errors &&
+          bookingForm.get('studentId').touched
+        "
+      >
+        Por favor ingrese el nombre
+      </p>
+    </div>
+    <div class="form-controller">
+      <label>Id de la tutoría</label>
+      <div class="form-container">
+        <input
+          placeholder="Id de la tutoría"
+          formControlName="tutorShipId"
+          type="text"
+        />
+        <mat-icon>book</mat-icon>
+      </div>
+      <p
+        class="error"
+        *ngIf="
+          bookingForm.get('tutorShipId').errors &&
+          bookingForm.get('tutorShipId').touched
+        "
+      >
+        Por favor ingrese el nombre
+      </p>
+    </div>
+
+    <button>Crear Reserva</button>
+    <button (click)="cancel()">Cancelar</button>
+  </form>
+</div>

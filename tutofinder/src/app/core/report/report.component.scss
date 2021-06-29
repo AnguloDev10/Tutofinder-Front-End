@@ -1,0 +1,45 @@
+@import "src/assets/styles/sharedstyles.scss";
+.report-container {
+  @include title();
+  @include subtitle();
+  @include container();
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  .menu-items {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .reports {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 400px;
+    gap: 1rem;
+    flex-wrap: wrap;
+    .single-report {
+      @include container();
+      width: 200px;
+      display: inline;
+      flex-direction: column;
+      height: 250px;
+      border: 1px solid;
+      border-radius: 10px;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+    }
+  }
+}
+
+@media screen and(max-width:600px) {
+  .report-container {
+    height: auto;
+    .reports {
+      height: auto;
+    }
+  }
+}

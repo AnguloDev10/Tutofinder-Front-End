@@ -1,0 +1,68 @@
+<div class="course">
+  <h1>Crear Reporte</h1>
+  <form [formGroup]="reportForm">
+    <div class="form-controller">
+      <label>Descripción del reporte</label>
+      <div class="form-container">
+        <input
+          placeholder="Descripción del reporte"
+          formControlName="descriptionReport"
+          type="text"
+        />
+        <mat-icon>book</mat-icon>
+      </div>
+      <p
+        class="error"
+        *ngIf="
+          reportForm.get('descriptionReport').errors &&
+          reportForm.get('descriptionReport').touched
+        "
+      >
+        Por favor ingrese la descripción del reporte
+      </p>
+    </div>
+    <div class="form-controller">
+      <label>Id del estudiante</label>
+      <div class="form-container">
+        <input
+          placeholder="Id del estudiante"
+          formControlName="studentId"
+          type="number"
+        />
+        <mat-icon>pin</mat-icon>
+      </div>
+      <p
+        class="error"
+        *ngIf="
+          reportForm.get('studentId').errors &&
+          reportForm.get('studentId').touched
+        "
+      >
+        Por favor ingrese el id del estudiante
+      </p>
+    </div>
+    <div class="form-controller">
+      <label>Id del curso</label>
+      <div class="form-container">
+        <input
+          placeholder="Id del estudiante"
+          formControlName="tutorshipId"
+          type="number"
+        />
+        <mat-icon>pin</mat-icon>
+      </div>
+      <p
+        class="error"
+        *ngIf="
+          reportForm.get('tutorshipId').errors &&
+          reportForm.get('tutorshipId').touched
+        "
+      >
+        Por favor ingrese el id del estudiante
+      </p>
+    </div>
+
+    <button>Crear Reporte</button>
+    <button (click)="cancel()">Cancelar</button>
+  </form>
+</div>
