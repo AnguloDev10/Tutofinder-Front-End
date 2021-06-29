@@ -5,9 +5,11 @@
   height: 240px;
   background-color: white;
   border-radius: 10px;
-  padding: 10%;
+  padding: 10px;
   display: flex;
+  transition: all 250ms ease;
   flex-direction: column;
+  cursor: pointer;
   justify-content: flex-start;
   @include subtitle();
   @include button();
@@ -23,11 +25,11 @@
     width: 100%;
     font-size: 1rem;
     margin-top: 20px;
+    p {
+      margin: 0;
+    }
   }
 }
-@media screen and (max-width: 1020px) {
-  .menu-item-container {
-    width: 130px;
-    height: 170px;
-  }
+.menu-item-container:hover {
+  transform: translateY(-15px);
 }

@@ -1,15 +1,17 @@
 <form [formGroup]="loginForm">
   <div class="form-controller">
-    <label>Email</label>
+    <label>Usuario</label>
     <div class="form-container">
-      <input placeholder="Email" formControlName="email" type="email" />
-      <mat-icon>email</mat-icon>
+      <input placeholder="Usuario" formControlName="username" type="email" />
+      <mat-icon>face</mat-icon>
     </div>
     <p
       class="error"
-      *ngIf="loginForm.get('email').errors && loginForm.get('email').touched"
+      *ngIf="
+        loginForm.get('username').errors && loginForm.get('username').touched
+      "
     >
-      Por favor ingrese un correo
+      Por favor ingrese un usuario
     </p>
   </div>
   <div class="form-controller">

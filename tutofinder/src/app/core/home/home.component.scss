@@ -5,12 +5,9 @@
   @include paragraph();
   @include title();
   @include subtitle();
+  @include container();
   width: 100%;
-  background-color: rgb(227, 235, 240);
-  height: calc(100vh - 90px);
-  padding: 10px 3% 10px 3%;
-  align-items: center;
-  justify-content: center;
+  height: calc(100vh);
 
   #cuaderno {
     width: 300px;

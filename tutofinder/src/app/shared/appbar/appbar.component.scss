@@ -57,7 +57,12 @@
 }
 .second-appbar {
   width: 100vw;
-  height: 36px;
+  transition: all 250ms ease;
+  button {
+    transition: all 350ms ease;
+    opacity: 0;
+  }
+  height: 0;
   background-color: #00678c;
 }
 @media screen and (max-width: 700px) {
@@ -72,6 +77,12 @@
         }
       }
     }
+  }
+  .second-appbar {
+    button {
+      opacity: 1;
+    }
+    height: 36px;
   }
 }
 

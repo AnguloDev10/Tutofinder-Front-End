@@ -1,0 +1,17 @@
+@import "src/assets/styles/sharedstyles.scss";
+
+.tutorship-icon {
+  width: 200px;
+  height: 250px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include paragraph();
+  p {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,33 @@
+@import "src/assets/styles/sharedstyles.scss";
+.course-container {
+  @include title();
+  @include subtitle();
+  @include container();
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  .menu-items {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .courses {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 400px;
+    gap: 1rem;
+    .single-course {
+      @include container();
+      width: 200px;
+      height: 250px;
+      border: 1px solid;
+      border-radius: 10px;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+    }
+  }
+}

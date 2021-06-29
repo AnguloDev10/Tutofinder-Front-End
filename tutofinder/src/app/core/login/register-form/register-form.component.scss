@@ -1,5 +1,14 @@
 @import "src/assets/styles/sharedstyles.scss";
+
+mat-slide-toggle {
+  p {
+    margin: 0;
+  }
+}
 form {
+  height: 400px;
+
+  overflow: scroll;
   @include form-controller(
     (
       Properties: (

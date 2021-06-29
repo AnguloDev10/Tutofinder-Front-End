@@ -22,6 +22,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   imports: [],
@@ -45,6 +46,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatDividerModule,
     MatProgressSpinnerModule,
     MatPaginatorModule,
+    MatSlideToggleModule,
     MatRadioModule,
     MatMenuModule,
     MatCheckboxModule,

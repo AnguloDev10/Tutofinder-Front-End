@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <h1>Tutorias</h1>
+  <div class="menu-items">
+    <app-menu-item
+      [menuItem]="'Crear Tutoria'"
+      [imageUrl]="
+        'https://laescuelacoach.com/wp-content/uploads/2017/01/Fotolia_96266867_XS.jpg'
+      "
+      (click)="createTutorship()"
+    ></app-menu-item>
+    <app-menu-item
+      [menuItem]="'Inscribirse'"
+      [imageUrl]="
+        'https://webdelmaestrocmf.com/portal/wp-content/uploads/2019/05/3-28.jpg'
+      "
+    ></app-menu-item>
+  </div>
+  <h1>Tutorias Disponibles</h1>
+  <div class="tutorships">
+    <app-tutorship-icon></app-tutorship-icon>
+    <app-tutorship-icon></app-tutorship-icon>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="course">
+  <h1>Crear Curso</h1>
+  <form [formGroup]="courseForm">
+    <div class="form-controller">
+      <label>Nombre del curso</label>
+      <div class="form-container">
+        <input
+          placeholder="Nombre del curso"
+          formControlName="name"
+          type="text"
+        />
+        <mat-icon>book</mat-icon>
+      </div>
+      <p
+        class="error"
+        *ngIf="courseForm.get('name').errors && courseForm.get('name').touched"
+      >
+        Por favor ingrese el nombre
+      </p>
+    </div>
+
+    <button>Crear Curso</button>
+    <button>Cancelar</button>
+  </form>
+</div>

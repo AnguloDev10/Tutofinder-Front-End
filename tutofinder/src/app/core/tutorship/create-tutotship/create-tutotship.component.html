@@ -1,0 +1,80 @@
+<div class="tutorship">
+  <h1>Crear Tutoría</h1>
+  <form [formGroup]="tutorshipForm" (onSubmit)="createTutorship()">
+    <div class="form-controller">
+      <label>Descripcion de la tutoria</label>
+      <div class="form-container">
+        <input
+          placeholder="Descripcion de la tutoria"
+          formControlName="tutorshipDescription"
+          type="text"
+        />
+        <mat-icon>email</mat-icon>
+      </div>
+      <p
+        class="error"
+        *ngIf="
+          tutorshipForm.get('tutorshipDescription').errors &&
+          tutorshipForm.get('tutorshipDescription').touched
+        "
+      >
+        Por favor ingrese la descripción
+      </p>
+    </div>
+    <div class="form-controller">
+      <label>Cantidad de minutos </label>
+      <div class="form-container">
+        <input
+          placeholder="Minutos"
+          formControlName="minutesAmount"
+          type="text"
+        />
+        <mat-icon>email</mat-icon>
+      </div>
+      <p
+        class="error"
+        *ngIf="
+          tutorshipForm.get('minutesAmount').errors &&
+          tutorshipForm.get('minutesAmount').touched
+        "
+      >
+        Por favor ingrese la cantidad de minutos
+      </p>
+    </div>
+    <div class="form-controller">
+      <label>Id del curso </label>
+      <div class="form-container">
+        <input placeholder="Minutos" formControlName="courseId" type="text" />
+        <mat-icon>library_books</mat-icon>
+      </div>
+      <p
+        class="error"
+        *ngIf="
+          tutorshipForm.get('courseId').errors &&
+          tutorshipForm.get('courseId').touched
+        "
+      >
+        Por favor ingrese el id del curso
+      </p>
+    </div>
+    <div class="form-controller">
+      <label>Id del profesor </label>
+      <div class="form-container">
+        <input placeholder="Minutos" formControlName="teacherId" type="text" />
+        <mat-icon>face</mat-icon>
+      </div>
+      <p
+        class="error"
+        *ngIf="
+          tutorshipForm.get('teacherId').errors &&
+          tutorshipForm.get('teacherId').touched
+        "
+      >
+        Por favor ingrese el id del profesor
+      </p>
+    </div>
+
+    <button (click)="createTutorship()">Crear Tutoría</button>
+    <button (click)="cancelTutorship()">Cancelar</button>
+  </form>
+</div>

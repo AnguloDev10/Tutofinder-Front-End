@@ -14,6 +14,19 @@ import { LeftSideNavComponent } from './shared/left-side-nav/left-side-nav.compo
 import { DashboardStudentComponent } from './core/dashboard-student/dashboard-student.component';
 import { LoginFormComponent } from './core/login/login-form/login-form.component';
 import { RegisterFormComponent } from './core/login/register-form/register-form.component';
+import { TutorshipComponent } from './core/tutorship/tutorship.component';
+import { MembershipComponent } from './core/membership/membership.component';
+import { ProfileComponent } from './core/profile/profile.component';
+import { FavoriteComponent } from './core/favorite/favorite.component';
+import { CreateTutotshipComponent } from './core/tutorship/create-tutotship/create-tutotship.component';
+import { TutorshipIconComponent } from './core/tutorship/tutorship-icon/tutorship-icon.component';
+import { BookingComponent } from './core/booking/booking.component';
+import { CourseComponent } from './core/course/course.component';
+import { ReportComponent } from './core/report/report.component';
+import { CardComponent } from './core/card/card.component';
+import { PaymentComponent } from './core/payment/payment.component';
+import { StudentComponent } from './core/student/student.component';
+import { CreateCourseComponent } from './core/course/create-course/create-course.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +40,19 @@ import { RegisterFormComponent } from './core/login/register-form/register-form.
     DashboardStudentComponent,
     LoginFormComponent,
     RegisterFormComponent,
+    TutorshipComponent,
+    MembershipComponent,
+    ProfileComponent,
+    FavoriteComponent,
+    CreateTutotshipComponent,
+    TutorshipIconComponent,
+    BookingComponent,
+    CourseComponent,
+    CardComponent,
+    PaymentComponent,
+    ReportComponent,
+    StudentComponent,
+    CreateCourseComponent,
   ],
   imports: [
     BrowserModule,

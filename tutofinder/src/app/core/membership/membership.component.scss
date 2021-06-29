@@ -1,0 +1,34 @@
+@import "src/assets/styles/sharedstyles.scss";
+.container-fluid {
+  @include container();
+  @include title();
+  @include subtitle();
+  @include button();
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .text {
+    width: 500px;
+    padding: 10px;
+    height: auto;
+    h2 {
+      text-align: justify;
+    }
+    button {
+      width: 100%;
+      margin-top: 10px;
+    }
+    img {
+      width: 50%;
+      height: auto;
+      transform: translateX(50%);
+    }
+  }
+}
+@media screen and(max-width:530px) {
+  .container-fluid {
+    .text {
+      width: 90%;
+    }
+  }
+}

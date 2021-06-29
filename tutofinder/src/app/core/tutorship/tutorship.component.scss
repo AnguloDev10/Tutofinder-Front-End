@@ -1,0 +1,36 @@
+@import "src/assets/styles/sharedstyles.scss";
+.container-fluid {
+  @include container();
+  @include title();
+  @include subtitle();
+  align-items: center;
+  flex-direction: column;
+  app-menu-item {
+    margin: 10px;
+  }
+  .menu-items {
+    padding: 10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+    grid-gap: 3rem;
+    place-content: center;
+    place-items: center;
+    align-items: center;
+  }
+  .tutorships {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    height: auto;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container-fluid {
+    height: auto;
+  }
+}

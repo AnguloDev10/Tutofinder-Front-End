@@ -5,10 +5,23 @@ $buttonColor: #233e62;
 $buttonOnHoverColor: #8884d4;
 $formdarkColorBackground: rgb(32 38 43);
 $backgroundDarkColor: rgb(66, 78, 89);
+$backgroundColor: rgb(227, 235, 240);
 @mixin center() {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@mixin container() {
+  width: 100vw;
+  height: 100vh;
+  padding: 30px 15px 30px 15px;
+  display: flex;
+  margin: 0;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box;
+  background: $backgroundColor;
 }
 @mixin title {
   h1 {
@@ -52,6 +65,8 @@ $backgroundDarkColor: rgb(66, 78, 89);
         }
       }
       .form-container {
+        display: flex;
+
         border: 1px solid;
         @if map-has-key($props, "radius") {
           border-radius: map-get($props, "radius");

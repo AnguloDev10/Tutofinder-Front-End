@@ -1,0 +1,7 @@
+@import "src/assets/styles/sharedstyles.scss";
+.container-fluid {
+  @include container();
+  @include title();
+  @include subtitle();
+  justify-content: center;
+}

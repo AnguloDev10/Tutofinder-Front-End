@@ -9,12 +9,18 @@ export class LeftSideNavComponent implements OnInit {
   constructor() {}
   @Output() closeSideNav: EventEmitter<boolean> = new EventEmitter(false);
   items = [
-    { name: 'Inicio', icon: 'home' },
-    { name: 'Tutoría', icon: 'school' },
-    { name: 'Membresía', icon: 'card_membership' },
-    { name: 'Perfil', icon: 'face' },
-    { name: 'Favoritos', icon: 'star' },
-    { name: 'Cerrar Sesión', icon: 'logout' },
+    { name: 'Inicio', icon: 'home', redirect: '/home' },
+    { name: 'Tutoría', icon: 'school', redirect: '/tutorship' },
+    { name: 'Membresía', icon: 'card_membership', redirect: '/membership' },
+    { name: 'Perfil', icon: 'face', redirect: '/profile' },
+    { name: 'Favoritos', icon: 'star', redirect: '/favorite' },
+    { name: 'Reserva', icon: 'book_online', redirect: '/favorite' },
+    { name: 'Curso', icon: 'book', redirect: '/favorite' },
+    { name: 'Reporte', icon: 'summarize', redirect: '/favorite' },
+    { name: 'Cerrar Sesión', icon: 'logout', redirect: '/home' },
   ];
   ngOnInit(): void {}
+  afterRedirect() {
+    this.closeSideNav.emit();
+  }
 }

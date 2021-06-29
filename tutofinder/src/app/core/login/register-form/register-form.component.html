@@ -1,14 +1,248 @@
-<form [formGroup]="registerForm">
+<mat-slide-toggle [(ngModel)]="isFather">
+  <p *ngIf="isFather">Registrar Padre</p>
+  <p *ngIf="!isFather">Registrar Docente</p>
+</mat-slide-toggle>
+
+<form [formGroup]="registerDocenteForm" *ngIf="!isFather">
   <div class="form-controller">
     <label>Nombre</label>
     <div class="form-container">
-      <input placeholder="Nombre" formControlName="name" type="text" />
+      <input placeholder="Nombre" formControlName="firstname" type="text" />
       <mat-icon>person</mat-icon>
     </div>
     <p
       class="error"
       *ngIf="
-        registerForm.get('name').errors && registerForm.get('name').touched
+        registerDocenteForm.get('firstname').errors &&
+        registerDocenteForm.get('firstname').touched
+      "
+    >
+      Por favor ingrese su nombre
+    </p>
+  </div>
+  <div class="form-controller">
+    <label>Apellido</label>
+    <div class="form-container">
+      <input placeholder="Apellido" formControlName="lastname" type="text" />
+      <mat-icon>emoji_emotions</mat-icon>
+    </div>
+    <p
+      class="error"
+      *ngIf="
+        registerDocenteForm.get('lastname').errors &&
+        registerDocenteForm.get('lastname').touched
+      "
+    >
+      Por favor ingrese su apellido
+    </p>
+  </div>
+  <div class="form-controller">
+    <label>Correo</label>
+    <div class="form-container">
+      <input placeholder="Correo" formControlName="email" type="text" />
+      <mat-icon>email</mat-icon>
+    </div>
+    <p
+      class="error"
+      *ngIf="
+        registerDocenteForm.get('email').errors &&
+        registerDocenteForm.get('email').touched
+      "
+    >
+      Por favor ingrese un correo
+    </p>
+  </div>
+  <div class="form-controller">
+    <label>Contraseña</label>
+    <div class="form-container">
+      <input placeholder="Contraseña" formControlName="password" type="text" />
+      <mat-icon>lock</mat-icon>
+    </div>
+    <p
+      class="error"
+      *ngIf="
+        registerDocenteForm.get('password').errors &&
+        registerDocenteForm.get('password').touched
+      "
+    >
+      Por favor ingrese una contraseña
+    </p>
+  </div>
+  <div class="form-controller">
+    <label>Usuario</label>
+    <div class="form-container">
+      <input placeholder="Contraseña" formControlName="username" type="text" />
+      <mat-icon>face</mat-icon>
+    </div>
+    <p
+      class="error"
+      *ngIf="
+        registerDocenteForm.get('username').errors &&
+        registerDocenteForm.get('username').touched
+      "
+    >
+      Por favor ingrese un usuario
+    </p>
+  </div>
+  <div class="form-controller">
+    <label>DNI</label>
+    <div class="form-container">
+      <input placeholder="DNI" formControlName="dni" type="text" />
+      <mat-icon>badge</mat-icon>
+    </div>
+    <p
+      class="error"
+      *ngIf="
+        registerDocenteForm.get('dni').errors &&
+        registerDocenteForm.get('dni').touched
+      "
+    >
+      Por favor ingrese su DNI
+    </p>
+  </div>
+  <div class="form-controller">
+    <label>Número de cuenta</label>
+    <div class="form-container">
+      <input
+        placeholder="Numero de cuenta"
+        formControlName="depositNumber"
+        type="text"
+      />
+      <mat-icon>savings</mat-icon>
+    </div>
+    <p
+      class="error"
+      *ngIf="
+        registerDocenteForm.get('depositNumber').errors &&
+        registerDocenteForm.get('depositNumber').touched
+      "
+    >
+      Por favor ingrese su cuenta bancaria
+    </p>
+  </div>
+  <div class="form-controller">
+    <label>Costo por Hora</label>
+    <div class="form-container">
+      <input
+        placeholder="Costo por Hora"
+        formControlName="hourlyCost"
+        type="text"
+      />
+      <mat-icon>monetization_on</mat-icon>
+    </div>
+    <p
+      class="error"
+      *ngIf="
+        registerDocenteForm.get('hourlyCost').errors &&
+        registerDocenteForm.get('hourlyCost').touched
+      "
+    >
+      Por favor ingrese su costo por hora
+    </p>
+  </div>
+
+  <div class="form-controller">
+    <label>Calle</label>
+    <div class="form-container">
+      <input placeholder="Calle" formControlName="street" type="email" />
+      <mat-icon>add_road</mat-icon>
+    </div>
+    <p
+      class="error"
+      *ngIf="
+        registerDocenteForm.get('street').errors &&
+        registerDocenteForm.get('street').touched
+      "
+    >
+      Por favor ingrese su calle
+    </p>
+  </div>
+  <div class="form-controller">
+    <label>Ciudad</label>
+    <div class="form-container">
+      <input placeholder="Ciudad" formControlName="city" type="email" />
+      <mat-icon>location_city</mat-icon>
+    </div>
+    <p
+      class="error"
+      *ngIf="
+        registerDocenteForm.get('city').errors &&
+        registerDocenteForm.get('city').touched
+      "
+    >
+      Por favor ingrese su ciudad
+    </p>
+  </div>
+  <div class="form-controller">
+    <label>Estado</label>
+    <div class="form-container">
+      <input placeholder="Estado" formControlName="state" type="email" />
+      <mat-icon>villa</mat-icon>
+    </div>
+    <p
+      class="error"
+      *ngIf="
+        registerDocenteForm.get('state').errors &&
+        registerDocenteForm.get('state').touched
+      "
+    >
+      Por favor ingrese su estado
+    </p>
+  </div>
+  <div class="form-controller">
+    <label>Pais</label>
+    <div class="form-container">
+      <input placeholder="Pais" formControlName="country" type="email" />
+      <mat-icon>flag</mat-icon>
+    </div>
+    <p
+      class="error"
+      *ngIf="
+        registerDocenteForm.get('country').errors &&
+        registerDocenteForm.get('country').touched
+      "
+    >
+      Por favor ingrese su país
+    </p>
+  </div>
+  <div class="form-controller">
+    <label>Codigo Postal</label>
+    <div class="form-container">
+      <input
+        placeholder="Codigo Postal"
+        formControlName="zipcode"
+        type="email"
+      />
+      <mat-icon>vpn_key</mat-icon>
+    </div>
+    <p
+      class="error"
+      *ngIf="
+        registerDocenteForm.get('zipcode').errors &&
+        registerDocenteForm.get('zipcode').touched
+      "
+    >
+      Por favor ingrese su código postal
+    </p>
+  </div>
+
+  <button (click)="register()">Registrarse</button>
+  <button (click)="activeLogin()">Cancelar Registro</button>
+</form>
+<!-- Padre-->
+
+<form [formGroup]="registerPadreForm" *ngIf="isFather">
+  <div class="form-controller">
+    <label>Nombre</label>
+    <div class="form-container">
+      <input placeholder="Nombre" formControlName="firstname" type="text" />
+      <mat-icon>person</mat-icon>
+    </div>
+    <p
+      class="error"
+      *ngIf="
+        registerPadreForm.get('firstname').errors &&
+        registerPadreForm.get('firstname').touched
       "
     >
       Por favor ingrese un nombre
@@ -18,28 +252,29 @@
     <label>Apellido</label>
     <div class="form-container">
       <input placeholder="Apellido" formControlName="lastname" type="text" />
-      <mat-icon>badge</mat-icon>
+      <mat-icon>emoji_emotions</mat-icon>
     </div>
     <p
       class="error"
       *ngIf="
-        registerForm.get('lastname').errors &&
-        registerForm.get('lastname').touched
+        registerPadreForm.get('lastname').errors &&
+        registerPadreForm.get('lastname').touched
       "
     >
       Por favor ingrese un apellido
     </p>
   </div>
   <div class="form-controller">
-    <label>Email</label>
+    <label>Correo</label>
     <div class="form-container">
-      <input placeholder="Email" formControlName="email" type="email" />
+      <input placeholder="Correo" formControlName="email" type="text" />
       <mat-icon>email</mat-icon>
     </div>
     <p
       class="error"
       *ngIf="
-        registerForm.get('email').errors && registerForm.get('email').touched
+        registerPadreForm.get('email').errors &&
+        registerPadreForm.get('email').touched
       "
     >
       Por favor ingrese un correo
@@ -48,24 +283,136 @@
   <div class="form-controller">
     <label>Contraseña</label>
     <div class="form-container">
-      <input
-        placeholder="Contraseña"
-        formControlName="password"
-        type="password"
-      />
+      <input placeholder="Contraseña" formControlName="password" type="text" />
       <mat-icon>lock</mat-icon>
     </div>
     <p
       class="error"
       *ngIf="
-        registerForm.get('password').errors &&
-        registerForm.get('password').touched
+        registerPadreForm.get('password').errors &&
+        registerPadreForm.get('password').touched
       "
     >
       Por favor ingrese una contraseña
     </p>
   </div>
+  <div class="form-controller">
+    <label>Usuario</label>
+    <div class="form-container">
+      <input placeholder="Contraseña" formControlName="username" type="text" />
+      <mat-icon>face</mat-icon>
+    </div>
+    <p
+      class="error"
+      *ngIf="
+        registerPadreForm.get('username').errors &&
+        registerPadreForm.get('username').touched
+      "
+    >
+      Por favor ingrese un usuario
+    </p>
+  </div>
+  <div class="form-controller">
+    <label>DNI</label>
+    <div class="form-container">
+      <input placeholder="DNI" formControlName="dni" type="email" />
+      <mat-icon>badge</mat-icon>
+    </div>
+    <p
+      class="error"
+      *ngIf="
+        registerPadreForm.get('dni').errors &&
+        registerPadreForm.get('dni').touched
+      "
+    >
+      Por favor ingrese su dni
+    </p>
+  </div>
+  <div class="form-controller">
+    <label>Calle</label>
+    <div class="form-container">
+      <input placeholder="Calle" formControlName="street" type="email" />
+      <mat-icon>add_road</mat-icon>
+    </div>
+    <p
+      class="error"
+      *ngIf="
+        registerPadreForm.get('street').errors &&
+        registerPadreForm.get('street').touched
+      "
+    >
+      Por favor ingrese su calle
+    </p>
+  </div>
+  <div class="form-controller">
+    <label>Ciudad</label>
+    <div class="form-container">
+      <input placeholder="Ciudad" formControlName="city" type="email" />
+      <mat-icon>location_city</mat-icon>
+    </div>
+    <p
+      class="error"
+      *ngIf="
+        registerPadreForm.get('city').errors &&
+        registerPadreForm.get('city').touched
+      "
+    >
+      Por favor ingrese su ciudad
+    </p>
+  </div>
+  <div class="form-controller">
+    <label>Estado</label>
+    <div class="form-container">
+      <input placeholder="Estado" formControlName="state" type="email" />
+      <mat-icon>villa</mat-icon>
+    </div>
+    <p
+      class="error"
+      *ngIf="
+        registerPadreForm.get('state').errors &&
+        registerPadreForm.get('state').touched
+      "
+    >
+      Por favor ingrese su estado
+    </p>
+  </div>
+  <div class="form-controller">
+    <label>Pais</label>
+    <div class="form-container">
+      <input placeholder="Pais" formControlName="country" type="email" />
+      <mat-icon>flag</mat-icon>
+    </div>
+    <p
+      class="error"
+      *ngIf="
+        registerPadreForm.get('country').errors &&
+        registerPadreForm.get('country').touched
+      "
+    >
+      Por favor ingrese su país
+    </p>
+  </div>
+  <div class="form-controller">
+    <label>Codigo Postal</label>
+    <div class="form-container">
+      <input
+        placeholder="Codigo Postal"
+        formControlName="zipcode"
+        type="email"
+      />
+      <mat-icon>vpn_key</mat-icon>
+    </div>
+    <p
+      class="error"
+      *ngIf="
+        registerPadreForm.get('zipcode').errors &&
+        registerPadreForm.get('zipcode').touched
+      "
+    >
+      Por favor ingrese su código postal
+    </p>
+  </div>
 
-  <button>Registrarse</button>
+  <button (click)="register()">Registrarse</button>
   <button (click)="activeLogin()">Cancelar Registro</button>
 </form>

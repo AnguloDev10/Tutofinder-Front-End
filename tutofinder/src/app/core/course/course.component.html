@@ -1,0 +1,22 @@
+<div class="course-container">
+  <h1>Cursos</h1>
+  <div class="menu-items">
+    <app-menu-item
+      [menuItem]="'Crear Curso'"
+      [imageUrl]="
+        'https://resizer.glanacion.com/resizer/oHkBXW98aAz3XqIkqx83HriyE8M=/879x586/smart/filters:quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/QS3KNYFVIFHPJLNBGX45PZCZSM.jpg'
+      "
+      (click)="createCourse()"
+    ></app-menu-item>
+  </div>
+  <h1>Cursos Disponibles</h1>
+
+  <div class="courses">
+    <div class="single-course mat-elevation-z4">
+      <p>Nombre del curso</p>
+    </div>
+    <div class="single-course mat-elevation-z4">
+      <p>Nombre del curso</p>
+    </div>
+  </div>
+</div>
