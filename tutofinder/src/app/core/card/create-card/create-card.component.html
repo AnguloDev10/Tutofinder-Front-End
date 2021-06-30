@@ -1,0 +1,67 @@
+<div class="card">
+  <h1>Crear Tarjeta</h1>
+  <form [formGroup]="cardForm">
+    <div class="form-controller">
+      <label>Número de la tarjeta</label>
+      <div class="form-container">
+        <input
+          placeholder="Número de la tarjeta"
+          formControlName="cardNumber"
+          type="text"
+        />
+        <mat-icon>pin</mat-icon>
+      </div>
+      <p
+        class="error"
+        *ngIf="
+          cardForm.get('cardNumber').errors &&
+          cardForm.get('cardNumber').touched
+        "
+      >
+        Por favor ingrese el número de la tarjeta
+      </p>
+    </div>
+    <div class="form-controller">
+      <label>Fecha de vencimiento</label>
+      <div class="form-container">
+        <input
+          placeholder="Fecha de vencimiento"
+          formControlName="expireDate"
+          type="text"
+        />
+        <mat-icon>event</mat-icon>
+      </div>
+      <p
+        class="error"
+        *ngIf="
+          cardForm.get('expireDate').errors &&
+          cardForm.get('expireDate').touched
+        "
+      >
+        Por favor ingrese la fecha de vencimiento
+      </p>
+    </div>
+    <div class="form-controller">
+      <label>Nombre del dueño</label>
+      <div class="form-container">
+        <input
+          placeholder="Nombre del dueño"
+          formControlName="expireDate"
+          type="text"
+        />
+        <mat-icon>face</mat-icon>
+      </div>
+      <p
+        class="error"
+        *ngIf="
+          cardForm.get('ownerName').errors && cardForm.get('ownerName').touched
+        "
+      >
+        Por favor ingrese el nombre del dueño de la tarjeta
+      </p>
+    </div>
+
+    <button>Crear Tarjeta</button>
+    <button (click)="cancel()">Cancelar</button>
+  </form>
+</div>

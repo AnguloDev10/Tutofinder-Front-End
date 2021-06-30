@@ -1,0 +1,44 @@
+@import "src/assets/styles/sharedstyles.scss";
+.card-container {
+  @include title();
+  @include subtitle();
+  @include container();
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  .menu-items {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 400px;
+    flex-wrap: wrap;
+    gap: 1rem;
+    .single-card {
+      @include container();
+      width: 200px;
+      height: 250px;
+      border: 1px solid;
+      border-radius: 10px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .card-container {
+    height: auto;
+    .cards {
+      height: auto;
+    }
+  }
+}

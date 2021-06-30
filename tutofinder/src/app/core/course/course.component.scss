@@ -18,6 +18,7 @@
     justify-content: center;
     width: 100%;
     height: 400px;
+    flex-wrap: wrap;
     gap: 1rem;
     .single-course {
       @include container();
@@ -28,6 +29,14 @@
       align-items: center;
       justify-content: center;
       background-color: white;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .course-container {
+    height: auto;
+    .courses {
+      height: auto;
     }
   }
 }

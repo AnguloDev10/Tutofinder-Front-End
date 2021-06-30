@@ -1,0 +1,20 @@
+@import "src/assets/styles/sharedstyles.scss";
+
+.card {
+  border: none;
+  @include title();
+  @include button();
+  button {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  @include form-controller(
+    (
+      Properties: (
+        height: 20px,
+      ),
+    )
+  );
+  display: flex;
+  flex-direction: column;
+}

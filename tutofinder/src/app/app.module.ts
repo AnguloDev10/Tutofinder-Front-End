@@ -29,6 +29,8 @@ import { StudentComponent } from './core/student/student.component';
 import { CreateCourseComponent } from './core/course/create-course/create-course.component';
 import { CreateReportComponent } from './core/report/create-report/create-report.component';
 import { CreateBookingComponent } from './core/booking/create-booking/create-booking.component';
+import { CreateCardComponent } from './core/card/create-card/create-card.component';
+import { CreatePaymentComponent } from './core/payment/create-payment/create-payment.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +59,8 @@ import { CreateBookingComponent } from './core/booking/create-booking/create-boo
     CreateCourseComponent,
     CreateReportComponent,
     CreateBookingComponent,
+    CreateCardComponent,
+    CreatePaymentComponent,
   ],
   imports: [
     BrowserModule,

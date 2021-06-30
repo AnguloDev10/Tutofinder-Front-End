@@ -1,0 +1,107 @@
+<div class="payment">
+  <h1>Crear Pago</h1>
+  <form [formGroup]="paymentForm">
+    <div class="form-controller">
+      <label>Descripción del pago</label>
+      <div class="form-container">
+        <input
+          placeholder="Descripción del pago"
+          formControlName="paymentDescription"
+          type="text"
+        />
+        <mat-icon>pin</mat-icon>
+      </div>
+      <p
+        class="error"
+        *ngIf="
+          paymentForm.get('paymentDescription').errors &&
+          paymentForm.get('paymentDescription').touched
+        "
+      >
+        Por favor ingrese la descripción del pago
+      </p>
+    </div>
+    <div class="form-controller">
+      <label>Id del padre</label>
+      <div class="form-container">
+        <input
+          placeholder="Id del padre"
+          formControlName="fatherId"
+          type="text"
+        />
+        <mat-icon>event</mat-icon>
+      </div>
+      <p
+        class="error"
+        *ngIf="
+          paymentForm.get('fatherId').errors &&
+          paymentForm.get('fatherId').touched
+        "
+      >
+        Por favor ingrese el Id del padre
+      </p>
+    </div>
+    <div class="form-controller">
+      <label>Id de la tarjeta</label>
+      <div class="form-container">
+        <input
+          placeholder="Id de la tarjeta"
+          formControlName="cardId"
+          type="text"
+        />
+        <mat-icon>card</mat-icon>
+      </div>
+      <p
+        class="error"
+        *ngIf="
+          paymentForm.get('cardId').errors && paymentForm.get('cardId').touched
+        "
+      >
+        Por favor ingrese el Id de la tarjeta
+      </p>
+    </div>
+    <div class="form-controller">
+      <label>Costo del pago</label>
+      <div class="form-container">
+        <input
+          placeholder="Costo de la tarjeta"
+          formControlName="paymentCost"
+          type="text"
+        />
+        <mat-icon>card</mat-icon>
+      </div>
+      <p
+        class="error"
+        *ngIf="
+          paymentForm.get('paymentCost').errors &&
+          paymentForm.get('paymentCost').touched
+        "
+      >
+        Por favor ingrese el costo del pago
+      </p>
+    </div>
+
+    <div class="form-controller">
+      <label>Id de la reserva</label>
+      <div class="form-container">
+        <input
+          placeholder="Costo de la tarjeta"
+          formControlName="Id de la reserva"
+          type="text"
+        />
+        <mat-icon>card</mat-icon>
+      </div>
+      <p
+        class="error"
+        *ngIf="
+          paymentForm.get('bookingId').errors &&
+          paymentForm.get('bookingId').touched
+        "
+      >
+        Por favor ingrese el id de la tarjeta
+      </p>
+    </div>
+    <button>Crear Pago</button>
+    <button (click)="cancel()">Cancelar</button>
+  </form>
+</div>

@@ -1,1 +1,30 @@
-<p>payment works!</p>
+<div class="payment-container">
+  <h1>Pagos</h1>
+  <div class="menu-items">
+    <app-menu-item
+      [menuItem]="'Crear Tarjeta'"
+      [imageUrl]="
+        'https://ecommercenews.eu/wp-content/uploads/2013/06/most_common_payment_methods_in_europe-480x254.png'
+      "
+      (click)="createPayment()"
+    ></app-menu-item>
+  </div>
+  <h1>Pagos Generados</h1>
+
+  <div class="payments">
+    <div class="single-payment mat-elevation-z4">
+      <p>Descripción del pago</p>
+      <p>Id del padre</p>
+      <p>Id de la tarjeta</p>
+      <p>Costo del pago</p>
+      <p>Id de la reservación</p>
+    </div>
+    <div class="single-payment mat-elevation-z4">
+      <p>Descripción del pago</p>
+      <p>Id del padre</p>
+      <p>Id de la tarjeta</p>
+      <p>Costo del pago</p>
+      <p>Id de la reservación</p>
+    </div>
+  </div>
+</div>
