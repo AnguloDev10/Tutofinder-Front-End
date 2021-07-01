@@ -46,7 +46,7 @@
       <div class="form-container">
         <input
           placeholder="Id del estudiante"
-          formControlName="tutorshipId"
+          formControlName="tutorShipId"
           type="number"
         />
         <mat-icon>pin</mat-icon>
@@ -54,15 +54,18 @@
       <p
         class="error"
         *ngIf="
-          reportForm.get('tutorshipId').errors &&
-          reportForm.get('tutorshipId').touched
+          reportForm.get('tutorShipId').errors &&
+          reportForm.get('tutorShipId').touched
         "
       >
         Por favor ingrese el id del estudiante
       </p>
     </div>
 
-    <button>Crear Reporte</button>
-    <button (click)="cancel()">Cancelar</button>
+    <button *ngIf="data == null" (click)="createReport()">Crear Reporte</button>
+    <button *ngIf="data != null" (click)="editReport()">Editar Reporte</button>
+    <button *ngIf="data != null" (click)="deleteReport()">
+      Borrar Reporte
+    </button>
   </form>
 </div>

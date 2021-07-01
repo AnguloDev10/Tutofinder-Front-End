@@ -1,1 +1,27 @@
-<p>student works!</p>
+<div class="student-container">
+  <h1>Estudiantes</h1>
+  <div class="menu-items">
+    <app-menu-item
+      [menuItem]="'Inscribir Estudiante'"
+      [imageUrl]="
+        'https://www.assignnmentinneed.com/wp-content/uploads/2020/10/successful-college-student-lg-700x480.png'
+      "
+      (click)="createStudent()"
+    ></app-menu-item>
+  </div>
+  <h1>Estudiantes Disponibles</h1>
+  <h2 *ngIf="Students.length <= 0">No hay estudiantes disponibles</h2>
+  <div class="students">
+    <div
+      class="single-student mat-elevation-z4"
+      *ngFor="let student of Students"
+      (click)="updateStudent(student)"
+    >
+      <p>{{ student.firstName }}</p>
+      <p>{{ student.lastName }}</p>
+      <p>{{ student.email }}</p>
+      <p>{{ student.educationLevel }}</p>
+      <p>{{ student.dni }}</p>
+    </div>
+  </div>
+</div>

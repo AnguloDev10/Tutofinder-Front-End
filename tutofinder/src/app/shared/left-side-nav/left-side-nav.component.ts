@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { AuthenticationService } from 'src/services/authentication.service';
 
 @Component({
   selector: 'app-left-side-nav',
@@ -6,7 +7,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./left-side-nav.component.scss'],
 })
 export class LeftSideNavComponent implements OnInit {
-  constructor() {}
+  constructor(private authenticationService: AuthenticationService) {}
   @Output() closeSideNav: EventEmitter<boolean> = new EventEmitter(false);
   items = [
     { name: 'Inicio', icon: 'home', redirect: '/home' },
@@ -17,10 +18,13 @@ export class LeftSideNavComponent implements OnInit {
     { name: 'Reserva', icon: 'book_online', redirect: '/favorite' },
     { name: 'Curso', icon: 'book', redirect: '/favorite' },
     { name: 'Reporte', icon: 'summarize', redirect: '/favorite' },
-    { name: 'Cerrar Sesión', icon: 'logout', redirect: '/home' },
+    { name: 'Cerrar Sesión', icon: 'logout', redirect: '/' },
   ];
   ngOnInit(): void {}
-  afterRedirect() {
+  afterRedirect(name) {
+    if (name == 'Cerrar Sesión') {
+      this.authenticationService.logOut();
+    }
     this.closeSideNav.emit();
   }
 }

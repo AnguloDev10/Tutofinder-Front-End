@@ -3,6 +3,8 @@
 .course {
   @include title();
   @include button();
+  position: relative;
+
   button {
     margin-bottom: 10px;
     width: 100%;

@@ -1,4 +1,4 @@
-<form [formGroup]="loginForm">
+<form [formGroup]="loginForm" (onSubmit)="logIn()">
   <div class="form-controller">
     <label>Usuario</label>
     <div class="form-container">
@@ -33,7 +33,7 @@
       Por favor ingrese una contraseña
     </p>
   </div>
-  <button>Iniciar Sesión</button>
+  <button (click)="logIn()">Iniciar Sesión</button>
   <p class="register" (click)="activeRegister()">
     ¿No tienes una cuenta? Regístrate
   </p>

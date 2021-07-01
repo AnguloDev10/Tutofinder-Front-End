@@ -5,6 +5,7 @@ import {
   NavigationStart,
   Event as NavigationEvent,
 } from '@angular/router';
+import { AuthenticationService } from 'src/services/authentication.service';
 
 @Component({
   selector: 'app-appbar',
@@ -14,7 +15,11 @@ import {
 export class AppbarComponent implements OnInit {
   @Output() onLeftSideBarActivator: EventEmitter<boolean> = new EventEmitter();
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
+  constructor(
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
+    private authenticationService: AuthenticationService
+  ) {}
   visibility = true;
   ngOnInit(): void {
     this.router.events.subscribe((event: NavigationEvent) => {
@@ -38,5 +43,8 @@ export class AppbarComponent implements OnInit {
 
   activeLeftSideNav() {
     this.onLeftSideBarActivator.emit();
+  }
+  logOut() {
+    this.authenticationService.logOut();
   }
 }

@@ -14,6 +14,7 @@
     >
     </app-menu-item>
     <app-menu-item
+      *ngIf="Rol != 'Father'"
       [menuItem]="'Membresía'"
       [imageUrl]="
         'https://media.pasionmovil.com/2019/10/apple-card-clonada.jpg'
@@ -30,6 +31,7 @@
     >
     </app-menu-item>
     <app-menu-item
+      *ngIf="Rol != 'Teacher'"
       [menuItem]="'Favoritos'"
       [imageUrl]="
         'https://sanroque.com.pe/wp-content/uploads/2017/03/O6VORA0.jpg'
@@ -38,6 +40,7 @@
     >
     </app-menu-item>
     <app-menu-item
+      *ngIf="Rol != 'Teacher'"
       [menuItem]="'Reserva'"
       [imageUrl]="
         'https://previews.123rf.com/images/artinspiring/artinspiring1705/artinspiring170500044/77328302-reserva-de-hotel-en-l%C3%ADnea-manos-sosteniendo-la-tableta-para-reservar-una-habitaci%C3%B3n-en-el-hotel-.jpg'
@@ -70,11 +73,20 @@
     >
     </app-menu-item>
     <app-menu-item
+      *ngIf="Rol != 'Teacher'"
       [menuItem]="'Pago'"
       [imageUrl]="
         'https://www.alvantia.com/wp-content/uploads/2018/08/imagen-medios-de-pago-def.jpg'
       "
       routerLink="/payment"
+    >
+    </app-menu-item>
+    <app-menu-item
+      [menuItem]="'Estudiante'"
+      [imageUrl]="
+        'https://images.ctfassets.net/p0qf7j048i0q/6UM0DTikFfdNvAu5jym5x9/c7ab7310b07ff8613ec0232135d5d9c9/G1155346217.jpg?w=1000&h=750&fit=fill&fm=webp'
+      "
+      routerLink="/student"
     >
     </app-menu-item>
   </div>

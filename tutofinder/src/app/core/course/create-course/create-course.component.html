@@ -1,6 +1,8 @@
 <div class="course">
-  <h1>Crear Curso</h1>
-  <form [formGroup]="courseForm">
+  <h1 *ngIf="this.data == null">Crear Curso</h1>
+  <h1 *ngIf="this.data != null">Editar Curso</h1>
+
+  <form [formGroup]="courseForm" (onSubmit)="createCourse()">
     <div class="form-controller">
       <label>Nombre del curso</label>
       <div class="form-container">
@@ -19,7 +21,10 @@
       </p>
     </div>
 
-    <button>Crear Curso</button>
+    <button *ngIf="data == null" (click)="createCourse()">Crear Curso</button>
+    <button *ngIf="data != null" (click)="editCourse()">Editar Curso</button>
+    <button *ngIf="data != null" (click)="deleteCourse()">Borrar Curso</button>
+
     <button (click)="cancel()">Cancelar</button>
   </form>
 </div>

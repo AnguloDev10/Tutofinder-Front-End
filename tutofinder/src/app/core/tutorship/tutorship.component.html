@@ -8,16 +8,15 @@
       "
       (click)="createTutorship()"
     ></app-menu-item>
-    <app-menu-item
-      [menuItem]="'Inscribirse'"
-      [imageUrl]="
-        'https://webdelmaestrocmf.com/portal/wp-content/uploads/2019/05/3-28.jpg'
-      "
-    ></app-menu-item>
   </div>
   <h1>Tutorias Disponibles</h1>
+  <h2 *ngIf="Tutorships.length <= 0">No hay cursos disponibles</h2>
+
   <div class="tutorships">
-    <app-tutorship-icon></app-tutorship-icon>
-    <app-tutorship-icon></app-tutorship-icon>
+    <app-tutorship-icon
+      (click)="updateTutorship(tutorship)"
+      [tutorship]="tutorship"
+      *ngFor="let tutorship of Tutorships"
+    ></app-tutorship-icon>
   </div>
 </div>

@@ -1,0 +1,21 @@
+@import "src/assets/styles/sharedstyles.scss";
+
+.student {
+  @include title();
+  @include button();
+  position: relative;
+
+  button {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  @include form-controller(
+    (
+      Properties: (
+        height: 20px,
+      ),
+    )
+  );
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,45 @@
+@import "src/assets/styles/sharedstyles.scss";
+.student-container {
+  @include title();
+  @include subtitle();
+  @include container();
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  .menu-items {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .students {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 400px;
+    flex-wrap: wrap;
+    gap: 1rem;
+    .single-student {
+      @include container();
+      width: 200px;
+      cursor: pointer;
+      height: 250px;
+      flex-direction: column;
+      border: 1px solid;
+      position: relative;
+      border-radius: 10px;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .student-container {
+    height: auto;
+    .students {
+      height: auto;
+    }
+  }
+}

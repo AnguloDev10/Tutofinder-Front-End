@@ -74,7 +74,15 @@
       </p>
     </div>
 
-    <button (click)="createTutorship()">Crear Tutoría</button>
+    <button *ngIf="data == null" (click)="createTutorship()">
+      Crear Tutoría
+    </button>
+    <button *ngIf="data != null" (click)="editTutorship()">
+      Editar Tutoría
+    </button>
+    <button *ngIf="data != null" (click)="deleteTutorship()">
+      Borrar Tutoría
+    </button>
     <button (click)="cancelTutorship()">Cancelar</button>
   </form>
 </div>

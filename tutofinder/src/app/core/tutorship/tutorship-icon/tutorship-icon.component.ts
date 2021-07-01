@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Tutorship } from 'src/app/model/Tutorship';
 
 @Component({
   selector: 'app-tutorship-icon',
   templateUrl: './tutorship-icon.component.html',
-  styleUrls: ['./tutorship-icon.component.scss']
+  styleUrls: ['./tutorship-icon.component.scss'],
 })
 export class TutorshipIconComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  constructor() {}
+  @Input() tutorship: Tutorship;
+  ngOnInit(): void {}
 }

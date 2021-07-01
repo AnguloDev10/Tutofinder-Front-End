@@ -23,8 +23,10 @@
     .single-course {
       @include container();
       width: 200px;
+      cursor: pointer;
       height: 250px;
       border: 1px solid;
+      position: relative;
       border-radius: 10px;
       align-items: center;
       justify-content: center;

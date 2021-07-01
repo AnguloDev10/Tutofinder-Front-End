@@ -31,6 +31,8 @@ import { CreateReportComponent } from './core/report/create-report/create-report
 import { CreateBookingComponent } from './core/booking/create-booking/create-booking.component';
 import { CreateCardComponent } from './core/card/create-card/create-card.component';
 import { CreatePaymentComponent } from './core/payment/create-payment/create-payment.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CreateStudentComponent } from './core/student/create-student/create-student.component';
 
 @NgModule({
   declarations: [
@@ -61,11 +63,13 @@ import { CreatePaymentComponent } from './core/payment/create-payment/create-pay
     CreateBookingComponent,
     CreateCardComponent,
     CreatePaymentComponent,
+    CreateStudentComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NoopAnimationsModule,
+    HttpClientModule,
     AngularMaterialModule,
     BrowserAnimationsModule,
   ],

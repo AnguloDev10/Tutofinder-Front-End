@@ -1,0 +1,129 @@
+<div class="student">
+  <h1 *ngIf="this.data == null">Crear Curso</h1>
+  <h1 *ngIf="this.data != null">Editar Curso</h1>
+
+  <form [formGroup]="studentForm" (onSubmit)="createStudent()">
+    <div class="form-controller">
+      <label>Nombre del estudiante</label>
+      <div class="form-container">
+        <input
+          placeholder="Nombre del estudiante"
+          formControlName="firstName"
+          type="text"
+        />
+        <mat-icon>face</mat-icon>
+      </div>
+      <p
+        class="error"
+        *ngIf="
+          studentForm.get('firstName').errors &&
+          studentForm.get('firstName').touched
+        "
+      >
+        Por favor ingrese el nombre
+      </p>
+    </div>
+    <div class="form-controller">
+      <label>Apellido del estudiante</label>
+      <div class="form-container">
+        <input
+          placeholder="Apellido del estudiante"
+          formControlName="lastName"
+          type="text"
+        />
+        <mat-icon>face</mat-icon>
+      </div>
+      <p
+        class="error"
+        *ngIf="
+          studentForm.get('lastName').errors &&
+          studentForm.get('lastName').touched
+        "
+      >
+        Por favor ingrese el apellido
+      </p>
+    </div>
+    <div class="form-controller">
+      <label>DNI</label>
+      <div class="form-container">
+        <input placeholder="DNI" formControlName="dni" type="text" />
+        <mat-icon>pin</mat-icon>
+      </div>
+      <p
+        class="error"
+        *ngIf="studentForm.get('dni').errors && studentForm.get('dni').touched"
+      >
+        Por favor ingrese el dni del alumno
+      </p>
+    </div>
+    <div class="form-controller">
+      <label>Correo</label>
+      <div class="form-container">
+        <input placeholder="Correo" formControlName="email" type="text" />
+        <mat-icon>email</mat-icon>
+      </div>
+      <p
+        class="error"
+        *ngIf="
+          studentForm.get('email').errors && studentForm.get('email').touched
+        "
+      >
+        Por favor ingrese el email del alumno
+      </p>
+    </div>
+
+    <div class="form-controller">
+      <label>Nivel de educación</label>
+      <div class="form-container">
+        <input
+          placeholder="Nivel de educación"
+          formControlName="educationLevel"
+          type="text"
+        />
+        <mat-icon>book</mat-icon>
+      </div>
+      <p
+        class="error"
+        *ngIf="
+          studentForm.get('educationLevel').errors &&
+          studentForm.get('educationLevel').touched
+        "
+      >
+        Por favor ingrese el nivel de educación del alumno
+      </p>
+    </div>
+
+    <div class="form-controller">
+      <label>Id del padre</label>
+      <div class="form-container">
+        <input
+          placeholder="Id del padre"
+          formControlName="fatherId"
+          type="text"
+        />
+        <mat-icon>pin</mat-icon>
+      </div>
+      <p
+        class="error"
+        *ngIf="
+          studentForm.get('fatherId').errors &&
+          studentForm.get('fatherId').touched
+        "
+      >
+        Por favor ingrese el id del padre
+      </p>
+    </div>
+
+    <button *ngIf="data == null" (click)="createStudent()">
+      Crear Estudiante
+    </button>
+    <button *ngIf="data != null" (click)="updateStudent()">
+      Editar Estudiante
+    </button>
+    <button *ngIf="data != null" (click)="deleteStudent()">
+      Borrar Estudiante
+    </button>
+
+    <button (click)="cancel()">Cancelar</button>
+  </form>
+</div>
