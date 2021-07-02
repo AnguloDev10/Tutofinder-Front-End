@@ -8,17 +8,17 @@
     ></app-menu-item>
   </div>
   <h1>Tarjetas Creadas</h1>
+  <h2 *ngIf="Cards.length <= 0">No hay tarjetas disponibles</h2>
 
   <div class="cards">
-    <div class="single-card mat-elevation-z4">
-      <p>Numero de tarjeta</p>
-      <p>Fecha de expiracion</p>
-      <p>Nombre del dueño</p>
-    </div>
-    <div class="single-card mat-elevation-z4">
-      <p>Numero de tarjeta</p>
-      <p>Fecha de expiracion</p>
-      <p>Nombre del dueño</p>
+    <div
+      class="single-card mat-elevation-z4"
+      *ngFor="let card of Cards"
+      (click)="updateCard(card)"
+    >
+      <p>{{ card.cardNumber }}</p>
+      <p>{{ card.expireDate }}</p>
+      <p>{{ card.ownerNuber }}</p>
     </div>
   </div>
 </div>

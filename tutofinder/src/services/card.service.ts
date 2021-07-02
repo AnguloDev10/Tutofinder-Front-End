@@ -6,7 +6,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class CardService {
-  Uri: string = `${environment}/Card`;
+  Uri: string = `${environment.PaymentService}/Card`;
   constructor(private http: HttpClient) {}
 
   getAllCards() {
@@ -20,5 +20,8 @@ export class CardService {
   }
   deleteCardById(id) {
     return this.http.delete(`${this.Uri}/${id}`);
+  }
+  updateCard(body, id) {
+    return this.http.put(`${this.Uri}/${id}`, body);
   }
 }

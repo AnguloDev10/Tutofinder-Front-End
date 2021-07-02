@@ -61,7 +61,9 @@
       </p>
     </div>
 
-    <button>Crear Tarjeta</button>
+    <button *ngIf="data == null" (click)="createCard()">Crear Tarjeta</button>
+    <button *ngIf="data != null" (click)="editCard()">Editar Tarjeta</button>
+    <button *ngIf="data != null" (click)="deleteCard()">Borrar Tarjeta</button>
     <button (click)="cancel()">Cancelar</button>
   </form>
 </div>

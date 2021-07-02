@@ -63,11 +63,7 @@
     <div class="form-controller">
       <label>Costo del pago</label>
       <div class="form-container">
-        <input
-          placeholder="Costo de la tarjeta"
-          formControlName="paymentCost"
-          type="text"
-        />
+        <input placeholder="Costo " formControlName="paymentCost" type="text" />
         <mat-icon>card</mat-icon>
       </div>
       <p
@@ -85,7 +81,7 @@
       <label>Id de la reserva</label>
       <div class="form-container">
         <input
-          placeholder="Costo de la tarjeta"
+          placeholder="Id de la reserva"
           formControlName="Id de la reserva"
           type="text"
         />
@@ -98,10 +94,12 @@
           paymentForm.get('bookingId').touched
         "
       >
-        Por favor ingrese el id de la tarjeta
+        Por favor ingrese el id de la reserva
       </p>
     </div>
-    <button>Crear Pago</button>
+    <button *ngIf="data == null" (click)="createPayment()">Crear Pago</button>
+    <button *ngIf="data != null" (click)="editPayment()">Editar Pago</button>
+    <button *ngIf="data != null" (click)="deletePayment()">Borrar Pago</button>
     <button (click)="cancel()">Cancelar</button>
   </form>
 </div>
