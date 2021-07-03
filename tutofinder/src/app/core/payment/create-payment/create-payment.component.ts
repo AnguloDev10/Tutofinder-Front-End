@@ -42,10 +42,10 @@ export class CreatePaymentComponent implements OnInit {
   createPayment() {
     var body = {
       paymentDescription: this.paymentForm.get('paymentDescription').value,
-      fatherId: this.paymentForm.get('fatherId').value,
-      cardId: this.paymentForm.get('cardId').value,
-      paymentCost: this.paymentForm.get('paymentCost').value,
-      bookingId: this.paymentForm.get('bookingId').value,
+      fatherId: Number(this.paymentForm.get('fatherId').value),
+      cardId: Number(this.paymentForm.get('cardId').value),
+      paymentCost: Number(this.paymentForm.get('paymentCost').value),
+      bookingId: Number(this.paymentForm.get('bookingId').value),
     };
     this.paymentService.createPayment(body).subscribe(
       (response) => {
@@ -63,13 +63,13 @@ export class CreatePaymentComponent implements OnInit {
       }
     );
   }
-  editCourse() {
+  editPayment() {
     var body = {
       paymentDescription: this.paymentForm.get('paymentDescription').value,
-      fatherId: this.paymentForm.get('fatherId').value,
-      cardId: this.paymentForm.get('cardId').value,
-      paymentCost: this.paymentForm.get('paymentCost').value,
-      bookingId: this.paymentForm.get('bookingId').value,
+      fatherId: Number(this.paymentForm.get('fatherId').value),
+      cardId: Number(this.paymentForm.get('cardId').value),
+      paymentCost: Number(this.paymentForm.get('paymentCost').value),
+      bookingId: Number(this.paymentForm.get('bookingId').value),
     };
     this.paymentService.updatePayment(body, this.data.id).subscribe(
       (response) => {
@@ -87,7 +87,7 @@ export class CreatePaymentComponent implements OnInit {
       }
     );
   }
-  deleteCourse() {
+  deletePayment() {
     this.paymentService.deletePaymentById(this.data.id).subscribe(
       (response: any) => {
         this.notificationService.openNotification(

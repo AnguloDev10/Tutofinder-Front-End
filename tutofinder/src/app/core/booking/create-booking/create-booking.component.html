@@ -42,7 +42,14 @@
       </p>
     </div>
 
-    <button>Crear Reserva</button>
+    <button *ngIf="data == null" (click)="createBooking()">
+      Crear Reserva
+    </button>
+    <button *ngIf="data != null" (click)="editBooking()">Editar Reserva</button>
+    <button *ngIf="data != null" (click)="deleteBooking()">
+      Borrar Reserva
+    </button>
+
     <button (click)="cancel()">Cancelar</button>
   </form>
 </div>

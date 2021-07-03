@@ -37,9 +37,9 @@ export class CreateTutotshipComponent implements OnInit {
   }
   createTutorship() {
     var body = {
-      tutorshipDescription: this.tutorshipForm.get('tutorshipDescription')
+      tutorShipDescription: this.tutorshipForm.get('tutorshipDescription')
         .value,
-      minutesAmount: Number(this.tutorshipForm.get('minutesAmount').value),
+      minutesAmmount: Number(this.tutorshipForm.get('minutesAmount').value),
       courseId: Number(this.tutorshipForm.get('courseId').value),
       teacherId: Number(this.tutorshipForm.get('teacherId').value),
     };

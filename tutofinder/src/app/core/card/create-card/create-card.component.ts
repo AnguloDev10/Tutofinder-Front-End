@@ -34,7 +34,7 @@ export class CreateCardComponent implements OnInit {
     this.dialogRef.close();
   }
 
-  createCourse() {
+  createCard() {
     var body = {
       cardNumber: this.cardForm.get('cardNumber').value,
       expireDate: this.cardForm.get('expireDate').value,
@@ -56,7 +56,7 @@ export class CreateCardComponent implements OnInit {
       }
     );
   }
-  editCourse() {
+  editCard() {
     var body = {
       cardNumber: this.cardForm.get('cardNumber').value,
       expireDate: this.cardForm.get('expireDate').value,
@@ -78,7 +78,7 @@ export class CreateCardComponent implements OnInit {
       }
     );
   }
-  deleteCourse() {
+  deleteCard() {
     this.cardService.deleteCardById(this.data.id).subscribe(
       (response: any) => {
         this.notificationService.openNotification(

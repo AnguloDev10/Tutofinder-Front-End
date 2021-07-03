@@ -10,15 +10,16 @@
     ></app-menu-item>
   </div>
   <h1>Reservas</h1>
+  <h2 *ngIf="Bookings.length <= 0">No hay Reservas creadas</h2>
 
   <div class="bookings">
-    <div class="single-booking mat-elevation-z4">
-      <p>Id del profesor</p>
-      <p>Id de la tutoria</p>
-    </div>
-    <div class="single-booking mat-elevation-z4">
-      <p>Id del profesor</p>
-      <p>Id de la tutoria</p>
+    <div
+      class="single-booking mat-elevation-z4"
+      *ngFor="let booking of Bookings"
+      (click)="updateBooking(booking)"
+    >
+      <p>{{ booking.studentId }}</p>
+      <p>{{ booking.tutorshipId }}</p>
     </div>
   </div>
 </div>

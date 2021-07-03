@@ -10,16 +10,19 @@ export class BookingService {
   Uri: string = `${environment.TutorshipService}/booking`;
   constructor(private http: HttpClient) {}
 
-  getAllBooking() {
-    return this.http.get<[]>(this.Uri);
+  getAllBookings() {
+    return this.http.get(`${this.Uri}`);
   }
   getBookingById(id) {
-    return this.http.get<any>(`${this.Uri}/${id}`);
+    return this.http.get(`${this.Uri}/${id}`);
   }
   deleteBookingById(id) {
-    return this.http.delete<any>(`${this.Uri}/${id}`);
+    return this.http.delete(`${this.Uri}/${id}`);
   }
   createBooking(body) {
-    return this.http.post<any>(`${this.Uri}`, body);
+    return this.http.post(`${this.Uri}`, body);
+  }
+  updateBooking(body, id) {
+    return this.http.put(`${this.Uri}/${id}`, body);
   }
 }
